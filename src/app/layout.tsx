@@ -3,13 +3,13 @@ import "./globals.css";
 import ClientLayout from "./client-layout";
 
 export const metadata: Metadata = {
-  title: "LUXE. | Shopping Premium Moderne",
+  title: "LUXE. | L'Art du Luxe Contemporain",
   description:
-    "Découvrez une sélection premium de produits au design exceptionnel. Mode, électronique, maison et sport.",
+    "Découvrez une sélection de pièces d'exception, façonnées par les plus grands artisans. Haute couture, joaillerie, accessoires et beauté.",
 };
 
 export const viewport: Viewport = {
-  themeColor: "#0a0a0a",
+  themeColor: "#1C1917",
   width: "device-width",
   initialScale: 1,
 };
@@ -23,11 +23,11 @@ export default function RootLayout({
     <html lang="fr">
       <head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Cormorant:wght@400;500;600;700&family=Montserrat:wght@300;400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>
-      <body className="bg-white text-primary antialiased">
+      <body className="bg-surface text-primary antialiased">
         <ClientLayout>{children}</ClientLayout>
       </body>
     </html>

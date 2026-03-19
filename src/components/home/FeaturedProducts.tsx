@@ -7,10 +7,10 @@ import { getFeaturedProducts } from "@/data/products";
 import ProductCard from "@/components/ui/ProductCard";
 
 export default function FeaturedProducts() {
-  const featured = getFeaturedProducts();
+  const featured = getFeaturedProducts().slice(0, 8);
 
   return (
-    <section className="py-24 bg-surface">
+    <section className="py-28 bg-surface">
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
         <motion.div
           initial={{ opacity: 0, y: 20 }}
@@ -19,19 +19,19 @@ export default function FeaturedProducts() {
           className="flex flex-col sm:flex-row items-start sm:items-end justify-between mb-16 gap-4"
         >
           <div>
-            <span className="text-accent text-sm font-semibold uppercase tracking-widest">
-              Sélection
+            <span className="text-gold text-xs font-semibold uppercase tracking-[0.2em]">
+              S&eacute;lection
             </span>
-            <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">
-              Produits vedettes
+            <h2 className="mt-4 text-4xl sm:text-5xl lg:text-6xl font-heading font-bold tracking-tight">
+              Pi&egrave;ces d&apos;exception
             </h2>
           </div>
           <Link
             href="/products"
-            className="group inline-flex items-center gap-2 text-sm font-semibold text-accent hover:text-accent-light transition-colors"
+            className="group inline-flex items-center gap-2 text-sm font-semibold text-gold hover:text-gold-light transition-colors duration-200 cursor-pointer"
           >
-            Voir tout
-            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform" />
+            Voir toutes les collections
+            <ArrowRight className="h-4 w-4 group-hover:translate-x-1 transition-transform duration-200" />
           </Link>
         </motion.div>
 

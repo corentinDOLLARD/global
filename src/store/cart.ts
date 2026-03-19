@@ -13,6 +13,7 @@ export interface CartItem {
 
 interface CartState {
   items: CartItem[];
+  wishlist: string[];
   isOpen: boolean;
   addItem: (product: Product, color?: string, size?: string) => void;
   removeItem: (productId: string) => void;
@@ -20,6 +21,8 @@ interface CartState {
   clearCart: () => void;
   toggleCart: () => void;
   setCartOpen: (open: boolean) => void;
+  toggleWishlist: (productId: string) => void;
+  isInWishlist: (productId: string) => boolean;
   totalItems: () => number;
   totalPrice: () => number;
 }
@@ -28,15 +31,23 @@ export const useCartStore = create<CartState>()(
   persist(
     (set, get) => ({
       items: [],
+      wishlist: [],
       isOpen: false,
 
       addItem: (product, color, size) => {
         const items = get().items;
-        const existing = items.find((i) => i.product.id === product.id);
+        const existing = items.find(
+          (i) =>
+            i.product.id === product.id &&
+            i.selectedColor === color &&
+            i.selectedSize === size
+        );
         if (existing) {
           set({
             items: items.map((i) =>
-              i.product.id === product.id
+              i.product.id === product.id &&
+              i.selectedColor === color &&
+              i.selectedSize === size
                 ? { ...i, quantity: i.quantity + 1 }
                 : i
             ),
@@ -77,6 +88,17 @@ export const useCartStore = create<CartState>()(
       clearCart: () => set({ items: [] }),
       toggleCart: () => set({ isOpen: !get().isOpen }),
       setCartOpen: (open) => set({ isOpen: open }),
+
+      toggleWishlist: (productId) => {
+        const wishlist = get().wishlist;
+        set({
+          wishlist: wishlist.includes(productId)
+            ? wishlist.filter((id) => id !== productId)
+            : [...wishlist, productId],
+        });
+      },
+
+      isInWishlist: (productId) => get().wishlist.includes(productId),
 
       totalItems: () => get().items.reduce((sum, i) => sum + i.quantity, 0),
       totalPrice: () =>
