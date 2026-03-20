@@ -3,9 +3,9 @@ import "./globals.css";
 import ClientLayout from "./client-layout";
 
 export const metadata: Metadata = {
-  title: "LUXE. | Shopping Premium Moderne",
+  title: "PrenyPreny | Votre Boutique Premium v2.0",
   description:
-    "Découvrez une sélection premium de produits au design exceptionnel. Mode, électronique, maison et sport.",
+    "Découvrez PrenyPreny, votre destination shopping premium. Mode, électronique, maison et sport. Design moderne, expérience exceptionnelle.",
 };
 
 export const viewport: Viewport = {
@@ -23,7 +23,7 @@ export default function RootLayout({
     <html lang="fr">
       <head>
         <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap"
+          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&family=Space+Grotesk:wght@400;500;600;700&display=swap"
           rel="stylesheet"
         />
       </head>

@@ -5,32 +5,15 @@ import Link from "next/link";
 import { ArrowRight, Zap, Truck, Shield, RefreshCw } from "lucide-react";
 
 const features = [
-  {
-    icon: Truck,
-    title: "Livraison express",
-    description: "Gratuite dès 50€ d'achat",
-  },
-  {
-    icon: Shield,
-    title: "Paiement sécurisé",
-    description: "Vos données sont protégées",
-  },
-  {
-    icon: RefreshCw,
-    title: "Retour gratuit",
-    description: "30 jours pour changer d'avis",
-  },
-  {
-    icon: Zap,
-    title: "Service client 24/7",
-    description: "Toujours à votre écoute",
-  },
+  { icon: Truck, title: "Livraison express", description: "Gratuite dès 50€ d'achat" },
+  { icon: Shield, title: "Paiement sécurisé", description: "Vos données sont protégées" },
+  { icon: RefreshCw, title: "Retour gratuit", description: "30 jours pour changer d'avis" },
+  { icon: Zap, title: "Service client 24/7", description: "Toujours à votre écoute" },
 ];
 
 export default function PromoSection() {
   return (
     <>
-      {/* Large Promo Banner */}
       <section className="py-24 bg-white">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <motion.div
@@ -39,7 +22,6 @@ export default function PromoSection() {
             viewport={{ once: true }}
             className="relative rounded-[2rem] overflow-hidden bg-primary p-12 sm:p-16 lg:p-20"
           >
-            {/* Background effects */}
             <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_top_right,_var(--color-accent)_0%,_transparent_60%)] opacity-30" />
             <div className="absolute top-0 right-0 w-1/2 h-full bg-gradient-to-l from-accent/10 to-transparent" />
 
@@ -47,7 +29,7 @@ export default function PromoSection() {
               <span className="inline-block bg-accent/20 text-accent-light text-sm font-semibold px-4 py-1.5 rounded-full mb-6">
                 Offre limitée
               </span>
-              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight">
+              <h2 className="text-4xl sm:text-5xl lg:text-6xl font-bold text-white leading-tight font-display">
                 Jusqu&apos;à{" "}
                 <span className="gradient-text">-40%</span>
                 <br />
@@ -69,7 +51,6 @@ export default function PromoSection() {
         </div>
       </section>
 
-      {/* Features */}
       <section className="py-16 bg-surface border-y border-gray-100">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
           <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
@@ -86,9 +67,7 @@ export default function PromoSection() {
                   <feature.icon className="h-6 w-6" />
                 </div>
                 <h3 className="font-semibold text-sm">{feature.title}</h3>
-                <p className="text-muted text-sm mt-1">
-                  {feature.description}
-                </p>
+                <p className="text-muted text-sm mt-1">{feature.description}</p>
               </motion.div>
             ))}
           </div>

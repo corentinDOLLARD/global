@@ -22,7 +22,7 @@ export default function FeaturedProducts() {
             <span className="text-accent text-sm font-semibold uppercase tracking-widest">
               Sélection
             </span>
-            <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">
+            <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight font-display">
               Produits vedettes
             </h2>
           </div>

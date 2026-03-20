@@ -6,7 +6,8 @@ function createPrismaClient() {
   const libsql = createClient({
     url: process.env.DATABASE_URL || "file:./prisma/dev.db",
   });
-  const adapter = new PrismaLibSql(libsql);
+  // eslint-disable-next-line @typescript-eslint/no-explicit-any
+  const adapter = new PrismaLibSql(libsql as any);
   return new PrismaClient({ adapter });
 }
 

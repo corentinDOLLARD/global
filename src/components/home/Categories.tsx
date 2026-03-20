@@ -19,7 +19,7 @@ export default function Categories() {
           <span className="text-accent text-sm font-semibold uppercase tracking-widest">
             Collections
           </span>
-          <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight">
+          <h2 className="mt-3 text-4xl sm:text-5xl font-bold tracking-tight font-display">
             Explorer par catégorie
           </h2>
         </motion.div>
@@ -35,7 +35,7 @@ export default function Categories() {
             >
               <Link
                 href={`/products?category=${cat.id}`}
-                className="group relative block aspect-[3/4] rounded-3xl overflow-hidden"
+                className="group relative block aspect-[3/4] rounded-3xl overflow-hidden card-hover"
               >
                 <Image
                   src={cat.image}
@@ -49,12 +49,8 @@ export default function Categories() {
                 <div className="absolute bottom-0 left-0 right-0 p-6">
                   <div className="flex items-end justify-between">
                     <div>
-                      <h3 className="text-white text-xl font-bold">
-                        {cat.name}
-                      </h3>
-                      <p className="text-white/60 text-sm mt-1">
-                        {cat.productCount} produits
-                      </p>
+                      <h3 className="text-white text-xl font-bold font-display">{cat.name}</h3>
+                      <p className="text-white/60 text-sm mt-1">{cat.productCount} produits</p>
                     </div>
                     <div className="bg-white/20 backdrop-blur-sm p-2.5 rounded-full group-hover:bg-accent group-hover:scale-110 transition-all duration-300">
                       <ArrowUpRight className="h-4 w-4 text-white" />
