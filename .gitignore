@@ -5,3 +5,8 @@ build/
 *.tsbuildinfo
 next-env.d.ts
 .env*.local
+.env
+
+/src/generated/prisma
+*.db
+prisma/dev.db
