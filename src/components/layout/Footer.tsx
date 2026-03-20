@@ -9,18 +9,27 @@ const footerLinks = {
     { label: "Joaillerie", href: "/products?category=jewelry" },
     { label: "Accessoires", href: "/products?category=accessories" },
     { label: "Beauté", href: "/products?category=beauty" },
+    { label: "Électronique", href: "/products?category=electronics" },
+    { label: "Maison & Design", href: "/products?category=home" },
+    { label: "Sport & Lifestyle", href: "/products?category=sport" },
   ],
-  "L'Expérience": [
+  "L'Exp\u00e9rience": [
     { label: "Personal Shopper", href: "#" },
     { label: "Sur-Mesure", href: "#" },
     { label: "Livraison VIP", href: "#" },
     { label: "Conciergerie", href: "#" },
   ],
   "La Maison": [
-    { label: "Notre Héritage", href: "#" },
+    { label: "Notre H\u00e9ritage", href: "#" },
     { label: "Savoir-Faire", href: "#" },
     { label: "Engagements", href: "#" },
-    { label: "Carrières", href: "#" },
+    { label: "Carri\u00e8res", href: "#" },
+  ],
+  Aide: [
+    { label: "FAQ", href: "#" },
+    { label: "Service Client", href: "#" },
+    { label: "Suivi de commande", href: "#" },
+    { label: "Retours", href: "#" },
   ],
 };
 
@@ -55,7 +64,7 @@ export default function Footer() {
 
       {/* Links */}
       <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
+        <div className="grid grid-cols-2 md:grid-cols-5 gap-8">
           <div>
             <Link href="/" className="flex items-center gap-1 mb-6 cursor-pointer">
               <span className="font-heading text-2xl font-bold">
@@ -63,7 +72,9 @@ export default function Footer() {
               </span>
             </Link>
             <p className="text-white/40 text-sm leading-relaxed mb-6">
-              L&apos;art du luxe contemporain.
+              L&apos;art du luxe contemporain
+              <br />
+              &amp; du shopping premium.
               <br />
               Depuis 2020.
             </p>

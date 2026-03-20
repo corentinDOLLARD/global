@@ -3,9 +3,9 @@ import "./globals.css";
 import ClientLayout from "./client-layout";
 
 export const metadata: Metadata = {
-  title: "LUXE. | L'Art du Luxe Contemporain",
+  title: "LUXE. | Shopping Premium Moderne",
   description:
-    "Découvrez une sélection de pièces d'exception, façonnées par les plus grands artisans. Haute couture, joaillerie, accessoires et beauté.",
+    "Découvrez une sélection premium : haute couture, joaillerie, électronique, maison, sport et beauté. L'excellence artisanale et l'innovation au même endroit.",
 };
 
 export const viewport: Viewport = {

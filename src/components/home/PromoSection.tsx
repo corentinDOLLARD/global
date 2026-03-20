@@ -2,28 +2,47 @@
 
 import { motion } from "framer-motion";
 import Link from "next/link";
-import { ArrowRight, Gem, Truck, Shield, Clock } from "lucide-react";
+import {
+  ArrowRight,
+  Gem,
+  Truck,
+  Shield,
+  Clock,
+  CreditCard,
+  Headphones,
+  Sparkles,
+} from "lucide-react";
 
 const features = [
   {
     icon: Truck,
     title: "Livraison signature",
-    description: "Gratuite et assur&eacute;e",
+    description: "Gratuite d\u00e8s 50\u20ac d\u2019achat",
   },
   {
     icon: Shield,
-    title: "Authenticit&eacute; garantie",
-    description: "Certificat d'origine inclus",
+    title: "Authenticit\u00e9 garantie",
+    description: "Certificat d\u2019origine inclus",
   },
   {
     icon: Clock,
     title: "Retour sous 30 jours",
-    description: "Satisfait ou rembours&eacute;",
+    description: "Satisfait ou rembours\u00e9",
+  },
+  {
+    icon: CreditCard,
+    title: "Paiement s\u00e9curis\u00e9",
+    description: "Cryptage SSL avanc\u00e9",
+  },
+  {
+    icon: Headphones,
+    title: "Service client VIP",
+    description: "Assistance 7j/7",
   },
   {
     icon: Gem,
     title: "Conciergerie VIP",
-    description: "Personal shopper d&eacute;di&eacute;",
+    description: "Personal shopper d\u00e9di\u00e9",
   },
 ];
 
@@ -48,7 +67,7 @@ export default function PromoSection() {
 
             <div className="relative max-w-xl">
               <span className="inline-flex items-center gap-2 bg-gold/15 text-gold text-sm font-semibold px-4 py-2 rounded-full mb-8">
-                <Gem className="h-3.5 w-3.5" />
+                <Sparkles className="h-3.5 w-3.5" />
                 Ventes Priv&eacute;es
               </span>
               <h2 className="text-4xl sm:text-5xl lg:text-6xl font-heading font-bold text-white leading-tight">
@@ -58,8 +77,8 @@ export default function PromoSection() {
                 sur la s&eacute;lection
               </h2>
               <p className="mt-6 text-white/40 text-lg max-w-md leading-relaxed">
-                Acc&eacute;dez &agrave; nos ventes priv&eacute;es sur une s&eacute;lection
-                de pi&egrave;ces d&apos;exception. Offre r&eacute;serv&eacute;e aux membres.
+                Mode, tech, maison, sport &mdash; profitez de nos ventes priv&eacute;es
+                sur une s&eacute;lection de pi&egrave;ces d&apos;exception dans tous nos univers.
               </p>
               <Link
                 href="/products"
@@ -76,7 +95,7 @@ export default function PromoSection() {
       {/* Features */}
       <section className="py-20 bg-surface border-y border-stone-200/50">
         <div className="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-6 gap-8">
             {features.map((feature, i) => (
               <motion.div
                 key={feature.title}
@@ -89,14 +108,10 @@ export default function PromoSection() {
                 <div className="inline-flex items-center justify-center w-14 h-14 rounded-2xl bg-gold/10 text-gold mb-4">
                   <feature.icon className="h-6 w-6" />
                 </div>
-                <h3
-                  className="font-semibold text-sm"
-                  dangerouslySetInnerHTML={{ __html: feature.title }}
-                />
-                <p
-                  className="text-muted text-sm mt-1"
-                  dangerouslySetInnerHTML={{ __html: feature.description }}
-                />
+                <h3 className="font-semibold text-sm">{feature.title}</h3>
+                <p className="text-muted text-sm mt-1">
+                  {feature.description}
+                </p>
               </motion.div>
             ))}
           </div>

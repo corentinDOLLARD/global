@@ -19,8 +19,9 @@ const navLinks = [
   { href: "/products", label: "Collections" },
   { href: "/products?category=fashion", label: "Haute Couture" },
   { href: "/products?category=jewelry", label: "Joaillerie" },
-  { href: "/products?category=accessories", label: "Accessoires" },
-  { href: "/products?category=beauty", label: "Beauté" },
+  { href: "/products?category=electronics", label: "Électronique" },
+  { href: "/products?category=home", label: "Maison" },
+  { href: "/products?category=sport", label: "Sport" },
 ];
 
 export default function Header() {
